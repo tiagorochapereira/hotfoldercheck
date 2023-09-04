@@ -1,0 +1,23 @@
+{
+    "name": "hotfolder_monitor",
+    "version": "1.0.0",
+    "description": "Hotfolder monitoring script for Accipiens",
+    "main": "hotfolder_monitor.ps1",
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "node-fetch": "^2.6.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "hotfolder_config": {
+        "volume": "D:",
+        "root": "/Playground/VWFSPorto/Monitoring/Scripts/Hotfolder/test",
+        "subfolder": [
+            {"monitor": "/tmp", "content_status": "empty", "max_files": "1"},
+            {"monitor": "/inbound", "content_status": "empty", "max_files": "1"},
+            {"monitor": "/outbound", "content_status": "full", "max_files": "1"}
+            ]
+        }
+}
