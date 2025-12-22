@@ -1,7 +1,7 @@
 #read configuration from Json file
 
 try {
-    $jsonConfigContents = Get-Content -Path "d:\Playground\VWFSPorto\Monitoring\Scripts\Hotfolder\hotfolder_monitor.json" -Raw
+    $jsonConfigContents = Get-Content -Path "d:\Playground\Monitoring\Scripts\Hotfolder\hotfolder_monitor.json" -Raw
 }
 catch {
     Write-Error "There was an error accessing the configuration file.";
@@ -30,4 +30,5 @@ foreach ($subfolder in $config.hotfolder_config.subfolder) {
         Write-Output $file.Name
     }
 }
+
 
